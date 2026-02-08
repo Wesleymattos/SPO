@@ -12,14 +12,22 @@
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
+
 <body>
 
 <header>
   <div class="container nav">
-<div class="logo">
-  <img src="assets/images/logo.png" alt="SPO Construções" class="logo-img">
-  SPO <span>Construções</span>
-</div>
+    <div class="logo">
+      <img src="assets/images/logo.png" alt="SPO Construções" class="logo-img">
+      SPO <span>Construções</span>
+    </div>
+
+    <!-- Botão Hamburguer -->
+    <div class="menu-toggle" id="mobile-menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
 
     <nav>
       <a href="#home">Início</a>
@@ -35,7 +43,7 @@
   <div class="hero-content">
     <h1>Construindo sonhos com <span>qualidade</span></h1>
     <p>Construções e reformas residenciais e industriais</p>
-    <a class="btn primary" href="https://wa.me/5500000000000">WhatsApp</a>
+    <a class="btn primary" href="https://wa.me/555184170494?text=Olá,%20quero%20solicitar%20um%20orçamento!" target="_blank">WhatsApp</a>
     <a class="btn outline" href="mailto:contato@spoconstrucoes.com">E-mail</a>
   </div>
 </section>
@@ -51,7 +59,7 @@
     <div class="card">
       <i class="fa-solid fa-wrench fa-2x"></i>
       <h3>Reformas</h3>
-      <p>Reformas de todos os tipos, residenciais e comerciais.</p>
+      <p>Reformas de todos os tipos, residenciais e industriais.</p>
     </div>
     <div class="card">
       <i class="fa-solid fa-tools fa-2x"></i>
@@ -74,6 +82,27 @@
 <footer>
   <p>© 2026 SPO Construções e Reformas</p>
 </footer>
+
+<!-- Script para menu hamburguer -->
+<script>
+  const menuToggle = document.getElementById('mobile-menu');
+  const nav = document.querySelector('header nav');
+  const navLinks = document.querySelectorAll('header nav a');
+
+  // Abre/fecha menu ao clicar no hamburguer
+  menuToggle.addEventListener('click', () => {
+    nav.classList.toggle('active');
+    menuToggle.classList.toggle('active');
+  });
+
+  // Fecha o menu ao clicar em qualquer link
+  navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      nav.classList.remove('active');
+      menuToggle.classList.remove('active');
+    });
+  });
+</script>
 
 </body>
 </html>

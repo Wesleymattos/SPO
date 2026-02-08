@@ -46,6 +46,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
 }
 
 .logo span {
@@ -72,16 +73,74 @@ nav a:hover {
 }
 
 .logo img.logo-img {
-    height: 50px;       /* ajuste o tamanho da logo */
-    margin-right: 10px;  /* espaço entre logo e texto */
+    height: 50px;
+    margin-right: 10px;
 }
+
+/* ==========================
+   Menu Hamburguer
+   ========================== */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    width: 30px;
+    height: 25px;
+    justify-content: space-between;
+}
+
+.menu-toggle span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background: var(--color-white);
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+/* Menu ativo - transforma em X */
+.menu-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+}
+
+@media (max-width: 768px) {
+  nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: var(--color-header);
+    flex-direction: column;
+    align-items: center;
+    display: none;
+    z-index: 999; /* garante que fique sobre a hero */
+  }
+
+  nav.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: flex;
+    z-index: 1000; /* sempre acima do nav */
+  }
+}
+
 
 /* ==========================
    Hero Section
    ========================== */
 .hero {
     height: 90vh;
-    background-image: url('../images/hero-bg.png'); /* caminho correto relativo ao CSS */
+    background-image: url('../images/hero-bg.png');
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -92,9 +151,9 @@ nav a:hover {
     text-align: center;
     position: relative;
     overflow: hidden;
+    z-index: 1;
 }
 
-/* Overlay escuro */
 .hero::before {
     content: '';
     position: absolute;
@@ -108,24 +167,17 @@ nav a:hover {
 
 .hero-content {
     position: relative;
-    z-index: 1;
-}
-
-
-/* Animação suave para hero */
-@keyframes heroFadeIn {
-    0% {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    z-index: 2;
 }
 
 .hero span {
     color: var(--color-accent);
+}
+
+/* Animação suave */
+@keyframes heroFadeIn {
+    0% { opacity: 0; transform: translateY(20px);}
+    100% { opacity: 1; transform: translateY(0);}
 }
 
 /* ==========================
@@ -144,7 +196,6 @@ nav a:hover {
     overflow: hidden;
 }
 
-/* Ripple effect simples ao clicar */
 .btn::after {
     content: '';
     position: absolute;
@@ -166,7 +217,6 @@ nav a:hover {
     transition: 0s;
 }
 
-/* Botão primário */
 .primary {
     background: var(--color-accent);
     color: var(--color-text);
@@ -178,7 +228,6 @@ nav a:hover {
     box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
-/* Botão outline */
 .outline {
     border: 2px solid var(--color-white);
     color: var(--color-white);
@@ -192,9 +241,6 @@ nav a:hover {
     box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
-/* ==========================
-   Cards
-   ========================== */
 /* ==========================
    Seção Nossos Serviços
    ========================== */
@@ -238,7 +284,6 @@ nav a:hover {
     color: #555;
 }
 
-/* Hover nos cards */
 .card:hover {
     transform: translateY(-10px) scale(1.03);
     box-shadow: 0 15px 30px rgba(0,0,0,0.2);
