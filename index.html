@@ -2,28 +2,31 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <title>Empreiteira SPO Construções e Reformas</title>
+  <title>SPO Construções e Reformas</title>
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Empreiteira SPO Construções e Reformas - Obras e reformas com qualidade e confiança">
-  
-  <!-- CSS moderno com variáveis e animações -->
+  <meta name="description" content="Construções e reformas com qualidade, segurança e compromisso. Solicite seu orçamento com a SPO Construções.">
+  <meta name="keywords" content="construção, reforma, empreiteira, obras, SPO Construções">
+
+  <!-- CSS -->
   <link rel="stylesheet" href="assets/css/style.css">
-  
+
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 
 <body>
 
+<!-- HEADER -->
 <header>
-  <div class="container nav">
+  <div class="header-container">
+
     <div class="logo">
-      <img src="assets/images/logo.png" alt="SPO Construções" class="logo-img">
-      SPO <span>Construções</span>
+      <img src="assets/images/logo.png" alt="SPO Construções e Reformas">
     </div>
 
-    <!-- Botão Hamburguer -->
-    <div class="menu-toggle" id="mobile-menu">
+    <!-- MENU MOBILE -->
+    <div class="menu-toggle" id="mobile-menu" aria-label="Abrir menu">
       <span></span>
       <span></span>
       <span></span>
@@ -35,96 +38,145 @@
       <a href="#about">Sobre</a>
       <a href="#contact">Contato</a>
     </nav>
+
   </div>
 </header>
 
-<!-- Hero com imagem de fundo -->
+<!-- HERO -->
 <section class="hero" id="home">
   <div class="hero-content">
     <h1>Construindo sonhos com <span>qualidade</span></h1>
     <p>Construções e reformas residenciais e industriais</p>
-    <a class="btn primary" href="https://wa.me/555184170494?text=Olá,%20quero%20solicitar%20um%20orçamento!" target="_blank">WhatsApp</a>
-    <a class="btn outline" href="mailto:contato@spoconstrucoes.com">E-mail</a>
+
+    <a class="btn primary" 
+       href="https://wa.me/555184170494?text=Olá,%20quero%20solicitar%20um%20orçamento!" 
+       target="_blank">
+       Solicitar Orçamento
+    </a>
+
+    <a class="btn outline" 
+       href="mailto:spoconstrucoes.br@gmail.com?subject=Orçamento&body=Olá,%20quero%20solicitar%20um%20orçamento">
+       Enviar E-mail
+    </a>
   </div>
 </section>
 
+<!-- SERVIÇOS -->
 <section id="services" class="container">
-  <h2>Nossos Serviços</h2>
+  <h2 class="section-title">Nossos Serviços</h2>
+
   <div class="cards">
+
     <div class="card">
       <i class="fa-solid fa-house-chimney fa-2x"></i>
       <h3>Construção Residencial</h3>
-      <p>Projetos residenciais completos com qualidade e segurança.</p>
+      <p>Projetos completos com qualidade e segurança.</p>
     </div>
+
     <div class="card">
       <i class="fa-solid fa-wrench fa-2x"></i>
       <h3>Reformas</h3>
-      <p>Reformas de todos os tipos, residenciais e industriais.</p>
+      <p>Reformas residenciais e industriais.</p>
     </div>
+
     <div class="card">
       <i class="fa-solid fa-tools fa-2x"></i>
       <h3>Manutenção</h3>
-      <p>Manutenção preventiva e corretiva para sua construção.</p>
+      <p>Manutenção preventiva e corretiva.</p>
     </div>
+
   </div>
 </section>
 
-<section id="about" class="container about-section">
-  <h2>Sobre a Empresa</h2>
-  <div class="about-content">
-    <div class="about-text">
-      <p>A Empreiteira <strong>SPO Construções</strong> atua no mercado da construção civil com foco em qualidade, segurança e compromisso. Transformamos projetos em realidade, respeitando prazos e oferecendo soluções personalizadas para cada cliente.</p>
-      <p>Nosso diferencial está na experiência, equipe qualificada e atenção aos detalhes, garantindo sempre resultados confiáveis e duradouros.</p>
+<!-- SOBRE -->
+<section id="about" class="container">
+  <h2 class="section-title">Sobre a Empresa</h2>
+
+  <p style="text-align:center; max-width:700px; margin:0 auto 40px;">
+    A <strong>SPO Construções</strong> atua com foco em qualidade, segurança e compromisso,
+    transformando projetos em realidade com excelência e atenção aos detalhes.
+  </p>
+
+  <div class="cards">
+
+    <div class="card">
+      <i class="fa-solid fa-shield-halved fa-2x"></i>
+      <h3>Segurança</h3>
+      <p>Seguimos normas rigorosas em todas as obras.</p>
     </div>
-    <div class="about-cards">
-      <div class="about-card">
-        <i class="fa-solid fa-shield-halved fa-2x"></i>
-        <h3>Segurança</h3>
-        <p>Obras realizadas com normas e protocolos de segurança rigorosos.</p>
-      </div>
-      <div class="about-card">
-        <i class="fa-solid fa-clock fa-2x"></i>
-        <h3>Prazos</h3>
-        <p>Entrega no prazo combinado, sem comprometer a qualidade.</p>
-      </div>
-      <div class="about-card">
-        <i class="fa-solid fa-thumbs-up fa-2x"></i>
-        <h3>Qualidade</h3>
-        <p>Materiais de primeira e mão de obra especializada.</p>
-      </div>
+
+    <div class="card">
+      <i class="fa-solid fa-clock fa-2x"></i>
+      <h3>Pontualidade</h3>
+      <p>Entregamos dentro do prazo combinado.</p>
     </div>
+
+    <div class="card">
+      <i class="fa-solid fa-thumbs-up fa-2x"></i>
+      <h3>Qualidade</h3>
+      <p>Materiais e mão de obra de alto padrão.</p>
+    </div>
+
   </div>
 </section>
 
-
+<!-- CONTATO -->
 <section id="contact" class="container">
-  <h2>Contato</h2>
-  <p>Solicite seu orçamento sem compromisso.</p>
+  <h2 class="section-title">Contato</h2>
+  <p style="text-align:center; margin-bottom:20px;">
+    Solicite seu orçamento sem compromisso.
+  </p>
+
+  <div style="text-align:center;">
+    <a class="btn primary" 
+       href="https://wa.me/555184170494?text=Olá,%20quero%20um%20orçamento!" 
+       target="_blank">
+       Falar no WhatsApp
+    </a>
+  </div>
 </section>
 
+<!-- BOTÕES FLUTUANTES -->
+<a href="https://wa.me/555184170494" class="whatsapp-float" target="_blank">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
+<a href="tel:+555184170494" class="phone-float">
+  <i class="fa-solid fa-phone"></i>
+</a>
+
+<!-- FOOTER -->
 <footer>
   <p>© 2026 SPO Construções e Reformas</p>
 </footer>
 
-<!-- Script para menu hamburguer -->
+<!-- SCRIPT -->
 <script>
+document.addEventListener('DOMContentLoaded', () => {
+
   const menuToggle = document.getElementById('mobile-menu');
   const nav = document.querySelector('header nav');
   const navLinks = document.querySelectorAll('header nav a');
 
-  // Abre/fecha menu ao clicar no hamburguer
+  if (!menuToggle || !nav) return;
+
   menuToggle.addEventListener('click', () => {
     nav.classList.toggle('active');
-    menuToggle.classList.toggle('active');
   });
 
-  // Fecha o menu ao clicar em qualquer link
   navLinks.forEach(link => {
     link.addEventListener('click', () => {
       nav.classList.remove('active');
-      menuToggle.classList.remove('active');
     });
   });
+
+  document.addEventListener('click', (e) => {
+    if (!nav.contains(e.target) && !menuToggle.contains(e.target)) {
+      nav.classList.remove('active');
+    }
+  });
+
+});
 </script>
 
 </body>
