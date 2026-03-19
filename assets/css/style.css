@@ -150,6 +150,19 @@ nav a:hover::after {
 .hero span {
     color: var(--color-accent);
 }
+.hero-description {
+    margin-top: 10px;
+    font-size: 0.95rem; /* menor */
+    line-height: 1.5;
+    
+}
+.hero-benefits {
+    margin-top: 15px;
+    color: var(--color-accent);
+    font-weight: bold;
+    line-height: 1.8;
+    text-align: center;
+}
 
 /* ==========================
    TÍTULOS
@@ -297,9 +310,18 @@ nav a:hover::after {
     background: #000;
 }
 
-.whatsapp-float:hover,
+.whatsapp-float:hover {
+    transform: scale(1.15);
+    box-shadow: 
+        0 12px 30px rgba(0,0,0,0.4),
+        0 0 20px rgba(37, 211, 102, 0.8); /* brilho verde */
+}
+
 .phone-float:hover {
-    transform: scale(1.1);
+    transform: scale(1.15);
+    box-shadow: 
+        0 12px 30px rgba(0,0,0,0.4),
+        0 0 15px rgba(255,255,255,0.6);
 }
 
 /* ==========================
@@ -449,9 +471,34 @@ footer a:hover {
 }
 
 .hero-logo {
-    width: 120px; /* tamanho da imagem */
-    margin-bottom: 20px;
+    width: 180px;
+    margin: 0 auto 20px;
     display: block;
-    margin-left: auto;
-    margin-right: auto;
+
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+/* efeito ao passar o mouse */
+.hero-logo:hover {
+    transform: scale(1.12);
+    filter: brightness(1.2) drop-shadow(0 0 10px rgba(255,255,255,0.6));
+}
+
+.hero h1 {
+    font-size: 2.8rem;
+    margin-bottom: 10px;
+    animation: zoomPulse 1.2s ease-in-out infinite;
+}
+
+/* animação */
+@keyframes zoomPulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.15);
+    }
+    100% {
+        transform: scale(1);
+    }
 }
