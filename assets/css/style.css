@@ -577,3 +577,31 @@ footer a:hover {
         transform: scale(1);
     }
 }
+
+/* ==========================
+   CLIENTES
+   ========================== */
+.clients-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 25px;
+    align-items: center;
+    justify-items: center;
+    margin-top: 40px;
+}
+
+.client-item img {
+    max-width: 100px;
+    height: auto;
+    filter: grayscale(70%);
+    opacity: 0.8;
+    transition: transform 0.3s ease, filter 0.3s ease, opacity 0.3s ease;
+}
+
+.client-item img:hover {
+    transform: scale(1.15);
+    filter: grayscale(0%);
+    opacity: 1;
+}
+
+/* título já está definido como .section-title */
