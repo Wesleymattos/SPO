@@ -306,12 +306,25 @@ nav a:hover::after {
    FOOTER
    ========================== */
 footer {
-    background: #000;
-    color: #fff;
+    background: #1c1c1c; /* cinza escuro elegante */
+    color: #ccc; /* texto mais suave */
     text-align: center;
-    padding: 20px;
+    padding: 25px 15px;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    border-top: 1px solid rgba(255,255,255,0.05);
 }
 
+footer a {
+    color: #facc15; /* mantém identidade */
+    text-decoration: none;
+    font-weight: 500;
+}
+
+footer a:hover {
+    text-decoration: underline;
+    color: #fff;
+}
 /* ==========================
    ANIMAÇÃO
    ========================== */
@@ -412,4 +425,33 @@ footer {
 .video-item video:hover {
     transform: scale(1.03);
     box-shadow: 0 12px 30px rgba(0,0,0,0.2);
+}
+
+/* HERO TEXTO MELHORADO */
+
+.hero-description {
+    margin-top: 10px;
+    font-size: 1.1rem;
+    line-height: 1.5;
+}
+
+.hero-location {
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.hero-benefits {
+    margin-top: 15px;
+    color: var(--color-accent);
+    font-weight: bold;
+    line-height: 1.6;
+}
+
+.hero-logo {
+    width: 120px; /* tamanho da imagem */
+    margin-bottom: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
