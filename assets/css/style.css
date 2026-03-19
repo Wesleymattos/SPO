@@ -542,7 +542,15 @@ footer a:hover {
     margin: 0 auto 20px;
     display: block;
 
-    transition: transform 0.3s ease, filter 0.3s ease;
+    /* brilho sempre ativo */
+    filter: brightness(1.2) drop-shadow(0 0 10px rgba(255,255,255,0.6));
+
+    transition: transform 0.3s ease;
+}
+
+/* hover só faz zoom */
+.hero-logo:hover {
+    transform: scale(1.12);
 }
 
 /* efeito ao passar o mouse */
