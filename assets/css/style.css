@@ -605,3 +605,40 @@ footer a:hover {
 }
 
 /* título já está definido como .section-title */
+
+/* SOBRE COM FUNDO */
+.about-section {
+    background: url('../images/fundoconcreto.jpg') center/cover no-repeat;
+    padding: 60px 20px;
+    position: relative;
+    color: #fff; /* Texto claro para contraste */
+}
+
+.about-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.5); /* sombra para destacar o texto */
+    z-index: 1;
+     border-radius: 25px; /* cantos arredondados */
+}
+
+.about-section .section-title,
+.about-section .about-text,
+.about-section .cards {
+    position: relative;
+    z-index: 2;
+}
+
+/* Ajuste dos cards sobre o fundo */
+.about-section .card {
+    background: rgba(255,255,255,0.1); /* leve transparência */
+    color: #fff;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-section .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.5);
+}
