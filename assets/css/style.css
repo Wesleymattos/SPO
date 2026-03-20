@@ -679,3 +679,18 @@ footer a:hover {
     color: #000;
 }
 
+.job-form {
+    max-width: 500px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.job-form input,
+.job-form textarea {
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
