@@ -666,3 +666,16 @@ footer a:hover {
 .video-item {
     text-align: center;
 }
+
+.contact-info {
+    margin-top: 25px;
+    text-align: center;
+    color: #333;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.contact-info strong {
+    color: #000;
+}
+
