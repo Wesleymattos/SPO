@@ -1043,4 +1043,33 @@ footer a:hover {
     border: 1px solid #ccc;
 }
 
+.instagram-section{
+    padding: 80px 20px;
+    background: #0f0f0f;
+    color: white;
+}
 
+.instagram-header{
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.instagram-header h2{
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.instagram-header p{
+    font-size: 18px;
+    color: #bdbdbd;
+    max-width: 700px;
+    margin: auto;
+    line-height: 1.6;
+}
+
+/* deixa o widget mais elegante */
+.elfsight-app-265f9f3c-57b0-4760-ae60-7a69f7a5fd23{
+    border-radius: 24px;
+    overflow: hidden;
+}
